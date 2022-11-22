@@ -1,0 +1,23 @@
+@{
+    ViewBag.Title = "CounterController";
+}
+
+<h2>CounterController</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-lg-4">Bie¿aca wartoœæ sesji:</div>
+        <div class="col-lg-8">@ViewBag.Message</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">Nowa wartoœæ sesji:</div>
+        <div class="col-lg-8">@Html.TextBox("val", "", new { @class = "form-control" })</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-8"><input type="submit" value="Zapisz" /></div>
+    </div>
+}
